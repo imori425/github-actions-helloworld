@@ -6,4 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, World!"
-
+  action:
+    name: Action Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Verify hello action works
+        uses: ./.github/actions/hello
